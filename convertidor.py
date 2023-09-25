@@ -8,3 +8,35 @@
 """ Desde la rama main o master subir al nuevo repositorio de github llamado conversor_de_unidades. (1 punto) """
 
 """ Recuerda que cada uno de los módulos, deben incluir el bloque if __name__ == "__main__" para sus pruebas en cada módulo. """
+
+def main():
+    while True:
+        # Muestra el menú principal
+        print("Menú Principal:")
+        print("[1] Calcular tu edad")
+        print("[2] Da vuelta tu nombre")
+        print("[3] Adivina un número en 1 y 10")
+        print("[0] Salir")
+        
+        # Solicita al usuario que ingrese una opción
+        opcion = input("Ingrese una opción: ")
+
+        try:
+            opcion = int(opcion)
+            if opcion == 0:
+                print("Saliendo del programa. ¡Hasta luego!")
+                break
+            elif opcion == 1:
+                calcular_edad()
+            elif opcion == 2:
+                dar_vuelta_nombre()
+            elif opcion == 3:
+                adivinar_numero()
+            else:
+                print("Opción no válida. Por favor, ingrese una opción válida.")
+        except ValueError:
+            print("Solo puede ingresar valores numéricos.")
+
+if __name__ == "__main__":
+    main()
+    
