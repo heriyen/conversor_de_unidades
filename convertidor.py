@@ -9,17 +9,34 @@
 
 """ Recuerda que cada uno de los módulos, deben incluir el bloque if __name__ == "__main__" para sus pruebas en cada módulo. """
 
+import temperatura 
+import masa
+import tiempo
 def main():
     while True:
         # Muestra el menú principal
         print("Menú Principal:")
-        print("[1] Calcular tu edad")
-        print("[2] Da vuelta tu nombre")
-        print("[3] Adivina un número en 1 y 10")
-        print("[0] Salir")
-        
+        print("[1]convertir celsius a fahrenheint")
+        print("[2]convertirt celsius a kelvin")
+        print("[3]convertir fahrenheit a celsius")
+        print("[4]convertir fahrenheint a kelvin")
+        print("[5]convertir kelvin a celsius")
+        print("[6]convertir kelvin a fahrenheint")
+        print("[7]convertir kilogramos a gramos")
+        print("[8]convertir kilogramos a toneladas")
+        print("[9]convertir gramos a kilogramos")
+        print("[10]convertir gramos a toneladas")
+        print("[11]convertir toneladas a kilogramos")
+        print("[12]convertir toneladas a gramos")
+        print("[13]convertir segundos a minutos")
+        print("[14]convertir segundos a horas")
+        print("[15]convertir minutos a horas")
+        print("[16]convertir minutos a segundos")
+        print("[17]convertir horas a segundos")
+        print("[18]convertir horas a minutos")
         # Solicita al usuario que ingrese una opción
         opcion = input("Ingrese una opción: ")
+        valorinicial= int(input("ingresa numero :"))
 
         try:
             opcion = int(opcion)
@@ -27,11 +44,59 @@ def main():
                 print("Saliendo del programa. ¡Hasta luego!")
                 break
             elif opcion == 1:
-                calcular_edad()
+                resultado= temperatura.celsius_a_fahrenheit(valorinicial)
+                print("el resultado es :", resultado)
             elif opcion == 2:
-                dar_vuelta_nombre()
+                resultado= temperatura.celsius_a_kelvin(valorinicial)
+                print("el resultado es :", resultado)
             elif opcion == 3:
-                adivinar_numero()
+                resultado= temperatura.fahrenheit_a_celsius(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 4:
+                resultado= temperatura.fahrenheit_a_kelvin(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 5:
+                resultado= temperatura.kelvin_a_celsius(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 6:
+                resultado= temperatura.kelvin_a_fahrenheit(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 7:
+                resultado= masa.Kilogramos_a_Gramos(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 8:
+                resultado= masa.Kilogramos_a_toneladas(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 9:
+                resultado= masa.gramos_a_kilogramos(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 10:
+                resultado= masa.Gramos_a_toneladas(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 11:
+                resultado= masa.toneladas_a_kilogramos(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 12:
+                resultado= masa.toneladas_a_Gramos(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 13:
+                resultado= tiempo.segundo_a_minutos(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 14:
+                resultado= tiempo.segundo_a_horas(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 15:
+                resultado= tiempo.minutos_a_horas(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 16:
+                resultado= tiempo.minutos_a_segundos(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 17:
+                resultado= tiempo.horas_a_segundo(valorinicial)
+                print("el resultado es :", resultado)
+            elif opcion == 18:
+                resultado= tiempo.horas_a_minutos(valorinicial)
+                print("el resultado es :", resultado)
             else:
                 print("Opción no válida. Por favor, ingrese una opción válida.")
         except ValueError:
@@ -39,4 +104,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
     
